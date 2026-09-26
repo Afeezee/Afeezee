@@ -8,7 +8,7 @@ const socials = [
   { label: "GitHub", href: "https://github.com/Afeezee" },
   { label: "AllPoetry", href: "https://allpoetry.com/Afeezee" },
   { label: "Substack", href: "https://afeezeenotes.substack.com" },
-  { label: "Email", href: "mailto:olagunjuafeez@gmail.com" },
+  { label: "Email", href: "mailto:hello@afeezee.com" },
 ];
 
 export function Footer() {
@@ -26,10 +26,10 @@ export function Footer() {
           </p>
           <p className="mt-4 text-xs text-muted">
             <a
-              href="mailto:olagunjuafeez@gmail.com"
+              href="mailto:hello@afeezee.com"
               className="transition hover:text-[color:var(--fg-strong)]"
             >
-              olagunjuafeez@gmail.com
+              hello@afeezee.com
             </a>
           </p>
         </div>

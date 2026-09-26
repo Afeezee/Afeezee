@@ -8,6 +8,7 @@ const tabs = [
   { href: "/admin", label: "Overview" },
   { href: "/admin/poems", label: "Poems" },
   { href: "/admin/essays", label: "Essays" },
+  { href: "/admin/contacts", label: "Contacts" },
 ];
 
 export function AdminShell({ children }: { children: ReactNode }) {

@@ -61,7 +61,7 @@ export default async function AdminHome() {
         <dl className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3">
           <Stat label="Poems" value={c.poems} href="/admin/poems" />
           <Stat label="Essays" value={c.essays} href="/admin/essays" />
-          <Stat label="Contact submissions" value={c.contacts} />
+          <Stat label="Contact submissions" value={c.contacts} href="/admin/contacts" />
         </dl>
       )}
     </AdminShell>
