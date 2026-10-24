@@ -1,4 +1,9 @@
-export type PubStatus = "published" | "under-review" | "in-preparation" | "submitted";
+export type PubStatus =
+  | "published"
+  | "accepted-for-review"
+  | "under-review"
+  | "in-preparation"
+  | "submitted";
 
 export type Publication = {
   slug: string;
@@ -21,13 +26,13 @@ export const publications: Publication[] = [
     title:
       "FakeSmash: A Multimodal Deep Learning Framework for Real-Time Detection of Video, Audio, and Image-Based Deepfakes in Social Media Applications",
     coAuthors: ["A. A. Olagunju", "et al. (7 co-authors)"],
-    venue: "Targeting: Human Behavior and Emerging Technologies (Wiley)",
-    status: "under-review",
+    venue: "Human Behavior and Emerging Technologies (Wiley)",
+    status: "accepted-for-review",
     abstract:
       "A multimodal deep-learning framework built with a Design Science Research method that fuses frequency-domain signals across video, audio, and image modalities to detect deepfakes in real-time social-media contexts. Trained and evaluated on FakeAVCeleb and FaceForensics++.",
     keywords: ["deepfake detection", "multimodal deep learning", "frequency-domain features", "DSR"],
     linkedTo: [
-      { label: "UniOsun PhD thesis", href: "/research/phd#uniosun" },
+      { label: "PhD thesis", href: "/research/phd" },
     ],
   },
   {
@@ -55,13 +60,17 @@ export const publications: Publication[] = [
   {
     slug: "digital-transformation-agriculture-systematic-review",
     title:
-      "Digital Transformation in Agriculture: A Systematic Review",
-    coAuthors: ["A. A. Olagunju", "co-authors"],
-    venue: "Targeting: Journal of Agricultural Informatics",
-    status: "under-review",
+      "A Systematic Review of Digital Transformation in Agriculture: Technologies, Impacts, and Future Pathways",
+    coAuthors: ["M. O. Amos", "A. A. Olagunju", "O. Y. Olatunji", "A. D. Tiwalade"],
+    venue: "Journal of Agricultural Informatics 17(2)",
+    year: "2026",
+    status: "published",
     abstract:
-      "Systematic review of digital transformation interventions in agriculture, mapping technology categories against adoption barriers and smallholder outcomes.",
-    keywords: ["digital agriculture", "systematic review", "smallholder"],
+      "A PRISMA 2020 review of 125 peer-reviewed studies (2010-2025) across five databases, synthesising how digital technologies are reshaping agricultural systems and where the adoption gap between developed and developing economies sits.",
+    abstractLong:
+      "Following PRISMA 2020 guidelines, this review identifies 125 peer-reviewed studies published between 2010 and 2025 across five databases and synthesises them thematically. The findings report that IoT-enabled precision irrigation reduces water use by 20-30%, AI-based pest detection cuts pesticide use by 30-40% while raising yields by 10-20%, and blockchain integration raises smallholder incomes by 20-30%. Adoption exceeds 45% of large farms in developed economies but reaches only 12-15% of smallholders in developing countries, held back mainly by cost, infrastructure, and digital literacy. The review argues that inclusive digital transformation requires low-cost technology design, hybrid knowledge systems, stronger policy frameworks, and interdisciplinary research centred on smallholder needs.",
+    keywords: ["digital agriculture", "systematic review", "PRISMA", "smallholder", "adoption gap"],
+    doi: "10.17700/jai.2026.17.2.811",
   },
   {
     slug: "turnitin-ai-detection-postgrad-survey",
@@ -73,7 +82,7 @@ export const publications: Publication[] = [
     abstract:
       "Ethics-approved fieldwork surveying OAU postgraduate students on Turnitin's AI-detection thresholds — false-positive incidence, appeal outcomes, and downstream academic-integrity consequences.",
     keywords: ["academic integrity", "AI detection", "Turnitin", "postgraduate"],
-    linkedTo: [{ label: "OAU PhD", href: "/research/phd#oau" }],
+    linkedTo: [{ label: "Ongoing research", href: "/research/ongoing" }],
   },
   {
     slug: "yoruba-diacritic-insertion-ai-tutor",
@@ -113,6 +122,7 @@ export const bySlug = Object.fromEntries(
 
 export const statusLabel: Record<PubStatus, string> = {
   published: "Published",
+  "accepted-for-review": "Accepted for review",
   "under-review": "Under review",
   "in-preparation": "In preparation",
   submitted: "Submitted",
@@ -127,32 +137,25 @@ export const researchInterests = [
   "digital financial inclusion",
 ];
 
-export const phdProgrammes = {
-  uniosun: {
-    institution: "Osun State University (Uniosun)",
-    degree: "PhD, Computer Science",
-    focus: "Multimodal deep learning for real-time deepfake detection",
-    thesis:
-      "A Multimodal Deep Learning Framework for Real-Time Detection of Video, Audio, and Image-Based Deepfakes in Social Media Applications",
-    methodology:
-      "Design Science Research approach. Multimodal frequency-domain detection framework. Datasets: FakeAVCeleb and FaceForensics++.",
-    stage: "Coursework and fieldwork in progress; FakeSmash paper drafted and under submission preparation.",
-    linked: [{ label: "FakeSmash paper", href: "/research/publications/fakesmash-multimodal-deepfake-detection" }],
-  },
-  oau: {
-    institution: "Obafemi Awolowo University (OAU)",
-    degree: "PhD, Software Engineering",
-    focus: "Writing-process provenance and academic integrity tooling",
-    thesis:
-      "Working title in progress — investigating how the way a piece of writing is produced (edit history, keystroke telemetry, revision graphs) can act as evidence of authorship in a large-language-model era.",
-    methodology:
-      "Field study of OAU postgraduate experience with AI-detection thresholds, coupled with a software engineering artefact for provenance capture and evaluation.",
-    stage: "Ethics approval and fieldwork underway; postgraduate survey in preparation.",
-    linked: [{ label: "AI-detection survey", href: "/research/publications/turnitin-ai-detection-postgrad-survey" }],
-  },
+export const phdProgramme = {
+  degree: "PhD in progress",
+  focus: "Multimodal deep learning for real-time deepfake detection",
+  thesis:
+    "A Multimodal Deep Learning Framework for Real-Time Detection of Video, Audio, and Image-Based Deepfakes in Social Media Applications",
+  methodology:
+    "Design Science Research approach. Multimodal frequency-domain detection framework. Datasets: FakeAVCeleb and FaceForensics++.",
+  stage:
+    "Coursework and fieldwork in progress. The FakeSmash paper has been accepted for review.",
+  linked: [{ label: "FakeSmash paper", href: "/research/publications/fakesmash-multimodal-deepfake-detection" }],
 } as const;
 
 export const ongoingIdeas = [
+  {
+    title: "Writing-process provenance and academic integrity tooling",
+    body:
+      "Fieldwork underway. Investigating how the way a piece of writing is produced — edit history, keystroke telemetry, revision graphs — can act as evidence of authorship in a large-language-model era, alongside a postgraduate survey of AI-detection threshold reliability.",
+    stage: "Fieldwork underway",
+  },
   {
     title: "Mapping Nigeria's terrorism & conflict incidents, 2009–2026",
     body:
@@ -179,6 +182,6 @@ export const teaching = {
 };
 
 export const currentlyLine =
-  "Finishing doctoral coursework and fieldwork across both PhD programmes, with FakeSmash and the Afreximbank–Edordu submission as recent completed research outputs.";
+  "Doctoral coursework and fieldwork on multimodal deepfake detection, with the FakeSmash paper accepted for review, the agriculture systematic review published, and the Afreximbank–Edordu entry submitted.";
 
-export const researchBio = `Afeez is a researcher working across AI and applied social-impact problems, currently pursuing two doctoral degrees simultaneously — a PhD in Computer Science at Osun State University (Uniosun), focused on multimodal deep learning for real-time deepfake detection, and a PhD in Software Engineering at Obafemi Awolowo University (OAU), focused on writing-process provenance and academic integrity tooling. Before this, he taught over 20 courses and supervised more than 30 students as Acting Head of the Department of Computer Engineering at Oduduwa University and as a lecturer at The Polytechnic, Ile-Ife. He's open to collaboration, co-authorship, and funded research opportunities.`;
+export const researchBio = `Afeez is a researcher working across AI and applied social-impact problems, currently working on a PhD in multimodal deepfake detection — multimodal deep learning for real-time detection of manipulated video, audio, and images. Before this, he taught over 20 courses and supervised more than 30 students as Acting Head of the Department of Computer Engineering at Oduduwa University and as a lecturer at The Polytechnic, Ile-Ife. He's open to collaboration, co-authorship, and funded research opportunities.`;

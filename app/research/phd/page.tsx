@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionShell, SectionPageHero } from "@/components/SectionShell";
 import { researchMeta, researchSubnav } from "@/lib/meta";
-import { phdProgrammes } from "@/lib/content/research";
+import { phdProgramme } from "@/lib/content/research";
 import { accentText } from "@/lib/identities";
 
 export const metadata: Metadata = {
   title: "PhD",
   description:
-    "Both doctoral programmes — Uniosun (Computer Science, multimodal deepfake detection) and OAU (Software Engineering, writing-process provenance & academic integrity).",
+    "Doctoral research on multimodal deep learning for real-time deepfake detection across video, audio, and image.",
 };
 
 export default function PhDPage() {
@@ -17,20 +17,18 @@ export default function PhDPage() {
       <SectionPageHero
         meta={researchMeta}
         eyebrow="PhD"
-        title="Two doctoral programmes"
-        body="One on how the machine imitates us; one on how the machine writes with us. Both anchored in applied AI, both currently active."
+        title="Multimodal deepfake detection"
+        body="Doctoral research on how the machine imitates us — and how to catch it doing so in real time, across video, audio, and image at once."
       />
 
       <div className="mx-auto max-w-4xl space-y-16 px-6 pb-24">
-        <Programme id="uniosun" p={phdProgrammes.uniosun} />
-        <Programme id="oau" p={phdProgrammes.oau} />
+        <Programme p={phdProgramme} />
       </div>
     </SectionShell>
   );
 }
 
 type Programme = {
-  institution: string;
   degree: string;
   focus: string;
   thesis: string;
@@ -39,16 +37,12 @@ type Programme = {
   linked?: readonly { label: string; href: string }[];
 };
 
-function Programme({ id, p }: { id: string; p: Programme }) {
+function Programme({ p }: { p: Programme }) {
   return (
-    <section id={id} className="scroll-mt-32">
+    <section className="scroll-mt-32">
       <p className={`text-xs uppercase tracking-[0.24em] ${accentText(researchMeta.accent)}`}>
         {p.degree}
       </p>
-      <h2 className="display-heading mt-3 text-3xl leading-[1.1] tracking-tightest text-[color:var(--fg-strong)] sm:text-4xl">
-        {p.institution}
-      </h2>
-
       <dl className="mt-8 grid gap-6 sm:grid-cols-[160px_1fr]">
         <Row label="Focus" body={p.focus} />
         <Row label="Thesis" body={p.thesis} />

@@ -8,7 +8,7 @@ import { accentText } from "@/lib/identities";
 export const metadata: Metadata = {
   title: "CV",
   description:
-    "Academic CV for Afeez Ayomide Olagunju — full-stack engineer, researcher, doctoral candidate at Uniosun (CS) and OAU (SE).",
+    "Academic CV for Afeez Ayomide Olagunju — full-stack engineer, researcher, and doctoral candidate in multimodal deepfake detection.",
 };
 
 const CV_PDF = "/cv/afeez-olagunju-cv.pdf";
@@ -21,7 +21,7 @@ export default function CVPage() {
         meta={researchMeta}
         eyebrow="CV"
         title="Curriculum vitae"
-        body="Institutional affiliations, teaching, doctoral programmes, and the record of shipped work — as a downloadable PDF."
+        body="Institutional affiliations, teaching, doctoral research, and the record of shipped work — as a downloadable PDF."
       />
 
       <section className="mx-auto max-w-4xl px-6 pb-8">
@@ -47,7 +47,7 @@ export default function CVPage() {
               CV · Full-Stack Engineer & Researcher
             </p>
             <p className="mt-2 text-sm text-[color:var(--fg)]/75">
-              Osun State, Nigeria · Two active doctoral programmes · 20+ courses taught · 30+ students supervised
+              Osun State, Nigeria · PhD in progress · 20+ courses taught · 30+ students supervised
             </p>
           </div>
           <div className="flex flex-col gap-2 sm:items-end">
@@ -74,12 +74,8 @@ export default function CVPage() {
         </h2>
         <ul className="mt-6 space-y-4 text-[color:var(--fg)]/85">
           <li>
-            <p className="font-medium text-[color:var(--fg-strong)]">PhD, Computer Science</p>
-            <p className="text-sm">Osun State University (Uniosun) · in progress</p>
-          </li>
-          <li>
-            <p className="font-medium text-[color:var(--fg-strong)]">PhD, Software Engineering</p>
-            <p className="text-sm">Obafemi Awolowo University (OAU) · in progress</p>
+            <p className="font-medium text-[color:var(--fg-strong)]">PhD — Multimodal deepfake detection</p>
+            <p className="text-sm">In progress</p>
           </li>
           <li className="pt-2 text-sm text-muted">
             Prior degrees & certifications — see the downloadable CV above.

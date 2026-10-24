@@ -65,7 +65,7 @@ export const identities: Identity[] = [
     id: "researcher",
     slug: "research",
     label: "Researcher",
-    role: "Two PhDs. Applied AI.",
+    role: "PhD research. Applied AI.",
     blurb:
       "Doctoral and collaborative research spanning AI, deepfakes, and beyond.",
     href: "/research",

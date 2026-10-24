@@ -112,7 +112,7 @@ export const cereusProducts: Product[] = [
     name: "FakeSmash",
     tagline: "Deepfake research platform.",
     description:
-      "Product surface for the multimodal deepfake-detection research programme (UniOsun PhD).",
+      "Product surface for the multimodal deepfake-detection research programme (PhD work).",
     status: "shipped",
     category: "Research platform",
     linkedTo: [

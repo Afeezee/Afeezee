@@ -14,7 +14,7 @@ const roles = [
 ];
 
 const stats = [
-  { value: "2", label: "concurrent PhDs" },
+  { value: "7", label: "papers & publications" },
   { value: "6", label: "EPs & albums" },
   { value: "30+", label: "tracks released" },
   { value: "200+", label: "poems written" },

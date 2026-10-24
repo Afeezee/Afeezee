@@ -7,7 +7,7 @@ import { accentText } from "@/lib/identities";
 
 export const metadata: Metadata = {
   title: "About the founder",
-  description: "Fuller founder story — technical background, two concurrent PhDs, prior university teaching, and the stack he keeps reaching for.",
+  description: "Fuller founder story — technical background, doctoral research, prior university teaching, and the stack he keeps reaching for.",
 };
 
 export default function StartupAbout() {
@@ -17,7 +17,7 @@ export default function StartupAbout() {
         meta={startupMeta}
         eyebrow="About"
         title="Afeezee, the founder"
-        body="Two concurrent PhDs, prior university teaching, and a decade of shipping. This is the founder story — how the researcher and the builder feed each other."
+        body="A PhD in progress, prior university teaching, and a decade of shipping. This is the founder story — how the researcher and the builder feed each other."
       />
 
       <section className="mx-auto grid max-w-5xl gap-8 px-6 pb-12 md:grid-cols-[220px_1fr] md:items-start">

@@ -23,7 +23,7 @@ export default function ResearchCollaborate() {
         meta={researchMeta}
         eyebrow="Collaborate"
         title="For academic and institutional visitors"
-        body="Open to collaboration, co-authorship, funded research opportunities, invited talks, and peer review. Both PhDs are active, so I plan carefully."
+        body="Open to collaboration, co-authorship, funded research opportunities, invited talks, and peer review. The PhD is active alongside the work, so I plan carefully."
       />
 
       <div className="mx-auto max-w-6xl px-6 pb-24">

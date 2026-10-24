@@ -41,10 +41,10 @@ npm run dev
 | `/writing/essays/[slug]` | Article layout, mini-markdown (`##`, `###`, `>`) |
 | `/writing/about` | Writer bio + AllPoetry / Substack cards |
 | `/writing/collaborate` | Section-aware contact form |
-| `/research` | Landing — bio, currently line, interests, PhDs |
+| `/research` | Landing — bio, currently line, interests, doctoral research |
 | `/research/publications` | List, filter by status; schema.org ScholarlyArticle on detail |
 | `/research/publications/[slug]` | Per-paper page |
-| `/research/phd` | Uniosun + OAU programmes side by side |
+| `/research/phd` | Doctoral research — multimodal deepfake detection |
 | `/research/ongoing` | Early ideas, framed honestly |
 | `/research/cv` | Placeholder CV download link |
 | `/research/collaborate` | Section-aware contact form (asks institution) |

@@ -8,14 +8,14 @@ import {
   currentlyLine,
   publications,
   statusLabel,
-  phdProgrammes,
+  phdProgramme,
 } from "@/lib/content/research";
 import { accentText } from "@/lib/identities";
 
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Two concurrent PhDs — multimodal deepfake detection (Uniosun) and writing-process provenance & academic integrity (OAU) — plus a portfolio of applied AI research.",
+    "PhD research on multimodal deepfake detection, plus a portfolio of applied AI and social-impact research.",
 };
 
 export default function ResearchHome() {
@@ -26,7 +26,7 @@ export default function ResearchHome() {
       <SectionPageHero
         meta={researchMeta}
         eyebrow="Research"
-        title="Two PhDs, one question"
+        title="How the machine imitates us"
         body={researchBio}
       />
 
@@ -68,12 +68,9 @@ export default function ResearchHome() {
       <section className="mx-auto max-w-6xl px-6 pb-10">
         <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-muted">
           <span className="inline-block h-px w-8" style={{ background: "var(--hairline-strong)" }} />
-          <span>Doctoral programmes</span>
+          <span>Doctoral research</span>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          <PhDCard programme="uniosun" />
-          <PhDCard programme="oau" />
-        </div>
+        <PhDCard />
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-24">
@@ -105,8 +102,8 @@ export default function ResearchHome() {
   );
 }
 
-function PhDCard({ programme }: { programme: "uniosun" | "oau" }) {
-  const p = phdProgrammes[programme];
+function PhDCard() {
+  const p = phdProgramme;
   return (
     <div
       className="rounded-2xl p-6"
@@ -116,7 +113,7 @@ function PhDCard({ programme }: { programme: "uniosun" | "oau" }) {
         {p.degree}
       </p>
       <p className="display-heading mt-2 text-xl tracking-tightest text-[color:var(--fg-strong)]">
-        {p.institution}
+        Multimodal deepfake detection
       </p>
       <p className="mt-4 text-sm leading-relaxed text-[color:var(--fg)]/80">
         <span className="font-medium text-[color:var(--fg-strong)]">Focus.</span> {p.focus}
@@ -125,7 +122,7 @@ function PhDCard({ programme }: { programme: "uniosun" | "oau" }) {
         <span className="font-medium text-[color:var(--fg-strong)]">Stage.</span> {p.stage}
       </p>
       <Link href="/research/phd" className="mt-6 inline-flex items-center gap-2 text-sm text-[color:var(--fg-strong)]">
-        Both programmes in detail →
+        The programme in detail →
       </Link>
     </div>
   );

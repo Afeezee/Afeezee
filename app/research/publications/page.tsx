@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 const filters: { value: PubStatus | "all"; label: string }[] = [
   { value: "all", label: "All" },
   { value: "published", label: "Published" },
+  { value: "accepted-for-review", label: "Accepted for review" },
   { value: "under-review", label: "Under review" },
   { value: "in-preparation", label: "In preparation" },
   { value: "submitted", label: "Submitted" },
@@ -36,7 +37,7 @@ export default function PublicationsPage({
         meta={researchMeta}
         eyebrow="Publications"
         title="Selected publications"
-        body="Full list of published, under-review, submitted, and in-preparation work. Filter by status; open a publication for the full record."
+        body="Full list of published, accepted, under-review, submitted, and in-preparation work. Filter by status; open a publication for the full record."
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-4">
